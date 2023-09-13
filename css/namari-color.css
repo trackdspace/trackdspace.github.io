@@ -58,7 +58,7 @@ a:hover,
 
 #header nav a,
 #header i {
-    color: #111;
+    color: #ece6e6;
 }
 
 
@@ -137,7 +137,7 @@ a:hover,
 /* Banner Background and Text Colors */
 
 #banner {
-    background: url("../images/banner-images/right.jpg") no-repeat right top;
+    background: url("../images/banner-images/sats_gray.gif") no-repeat right top;
     background-size: contain;
 }
 
@@ -180,14 +180,14 @@ body {
     font-size: 62px;
     line-height: 60px;
     font-weight: 800;
-    color: #111;
+    color: #f0e8e8;
 }
 
 #banner h2 {
     font-family: 'Open Sans', sans-serif, Arial, Helvetica;
     font-size: 18px;
     font-weight: 300;
-    color: #111;
+    color: #e9dddd;
 }
 
 
