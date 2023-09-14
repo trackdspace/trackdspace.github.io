@@ -137,8 +137,8 @@ a:hover,
 /* Banner Background and Text Colors */
 
 #banner-content {
-    background: url("../images/banner-images/esa-debris.gif") no-repeat center right;
-    background-size: auto;
+    /* background: url("../images/banner-images/esa-debris.gif") no-repeat center right;
+    background-size: auto; */
 }
 
 
