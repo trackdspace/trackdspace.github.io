@@ -137,7 +137,7 @@ a:hover,
 /* Banner Background and Text Colors */
 
 #banner-content {
-    background: url("../images/banner-images/sats.gif") no-repeat center right;
+    background: url("../images/banner-images/sats_gray.gif") no-repeat center right;
     /* background-size: contain; */
 }
 
