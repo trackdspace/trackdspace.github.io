@@ -29,9 +29,10 @@
 
     <!--Google Webfonts-->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
-    <!-- Google tag (gtag.js) --> 
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FKX34RGYJ"></script> 
-    <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-5FKX34RGYJ'); </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FKX34RGYJ"></script>
+    <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-5FKX34RGYJ'); </script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 
 <body>
@@ -132,13 +133,16 @@
             <div id="banner-content" class="row clearfix">
                 <div class="col-38 row">
                     <div class="section-heading">
-                        <h1>Making space safer, one block at a time</h1>
+                        <!-- <h1>Making space safer, one block at a time</h1> -->
+                        <h1>Debris or Weapon?</h1>
+                        <h2>Unless it's on a Blockchain, who can we trust?<br>
+                            Unlock the Future of Space Safety, One block at a time</h2>
                         <h2>The first decentralized space domain awareness and safety blockchain, preventing
                             weaponization of space</h2>
                     </div>
-                    <!--Call to Action-->
-                    <!-- <a href="#" class="button">JOIN US!</a> -->
-                    <!--End Call to Action-->
+                    <!-- Call to Action-->
+                    <a href="#joinus" class="button">JOIN US!</a>
+                    <!--End Call to Action -->
                 </div>
                 <div class="col-61">
                     <video width="100%" src="collision.mp4" autoplay muted loop></video>
@@ -284,6 +288,34 @@
 
 
             </div>
+            <div id="joinus" class="clearfix">
+                <div class="row no-padding-bottom clearfix">
+                    <div class="col-3">
+                        <div class="section-heading">
+                            <h2 class="section-title">Join us</h2>
+                            <form action="https://formie.io/form/d17d8a83-d594-47eb-99a0-c52e846f774c" method="POST">
+                                <div class="g-recaptcha" data-sitekey="6LfygEQoAAAAANJglJR03ytYULQVmjcGL8-n4Ovc"></div>
+                                <!-- Optional: Redirect to your success page -->
+                                <input name="_redirect" type="hidden" value="https://trckd.space/thanks.html">
+                                <p>
+                                    <label for="fname" class="form-text">Name</label><br>
+                                    <input type="text" id="fname" name="name" placeholder="Name"><br>
+                                    <label for="email_" class="form-text">email</label><br>
+                                    <input type="email" id="email_" name="email" placeholder="you@work.com">
+
+                                </p>
+
+
+                                <button class="button">Submit</button>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
             <!--End of Content Section-->
 
 
