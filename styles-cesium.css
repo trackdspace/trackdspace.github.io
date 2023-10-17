@@ -1,0 +1,23 @@
+.cesium-legend {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(245, 242, 242, 0.8);
+    border: 1px solid #d8c6c6;
+    padding: 10px;
+    font-size: 16px;
+    color: rgba(240, 230, 230, 0.8)
+}
+
+.green
+{
+    color: rgba(40, 131, 17, 0.8)
+}
+
+.blue {
+    color: rgba(13, 54, 235, 0.8)
+}
+
+.red {
+    color: rgba(194, 11, 11, 0.8)
+}
