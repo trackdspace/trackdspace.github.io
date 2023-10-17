@@ -25,10 +25,10 @@
 
   Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YjdlNGIyMy04OTc4LTRiMDEtOTQ3Yi02OGJhNzM3MmFhYWQiLCJpZCI6MTcxOTM0LCJpYXQiOjE2OTczNjk5MzB9._WUrOgsKx8i96z-WIMhjG79nW8Wj6Ce_-Yn35RQ_5A4";
 
-  const viewer = new Cesium.Viewer("cesiumContainer",  { shouldAnimate: false, });
+  const viewer = new Cesium.Viewer("cesiumContainer",  { shouldAnimate: true, });
 
   try {
-    const resource = await Cesium.IonResource.fromAssetId(2316099);
+    const resource = await Cesium.IonResource.fromAssetId(2317175);
     const dataSource = await Cesium.CzmlDataSource.load(resource);
     await viewer.dataSources.add(dataSource);
     await viewer.zoomTo(dataSource);
