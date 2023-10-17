@@ -25,13 +25,17 @@
 
   Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YjdlNGIyMy04OTc4LTRiMDEtOTQ3Yi02OGJhNzM3MmFhYWQiLCJpZCI6MTcxOTM0LCJpYXQiOjE2OTczNjk5MzB9._WUrOgsKx8i96z-WIMhjG79nW8Wj6Ce_-Yn35RQ_5A4";
 
-  const viewer = new Cesium.Viewer("cesiumContainer");
+  const viewer = new Cesium.Viewer("cesiumContainer",  { shouldAnimate: false, });
 
   try {
     const resource = await Cesium.IonResource.fromAssetId(2316099);
     const dataSource = await Cesium.CzmlDataSource.load(resource);
     await viewer.dataSources.add(dataSource);
     await viewer.zoomTo(dataSource);
+    viewer.camera.flyTo({
+      destination: Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000000.0),
+    });
+
   } catch (error) {
     console.log(error);
   }
