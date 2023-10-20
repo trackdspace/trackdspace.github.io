@@ -11,7 +11,7 @@
   <script src="https://cesium.com/downloads/cesiumjs/releases/1.110/Build/Cesium/Cesium.js"></script>
 
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.110/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
-  <link href ="styles-cesium.css" rel="stylesheet">
+  <link href="styles-cesium.css" rel="stylesheet">
 
 </head>
 
@@ -27,34 +27,43 @@
   <script type="module">
     // Your access token can be found at: https://ion.cesium.com/tokens.
     // Replace `your_access_token` with your Cesium ion access token.
+    function setViewerHeight() {
+      var viewerContainer = document.getElementById("cesiumContainer");
+      var windowHeight = window.innerHeight;
+      viewerContainer.style.height = windowHeight - 20 + "px";
+    }
+    setViewerHeight();
+    window.addEventListener("resize", setViewerHeight);
 
 
-  Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YjdlNGIyMy04OTc4LTRiMDEtOTQ3Yi02OGJhNzM3MmFhYWQiLCJpZCI6MTcxOTM0LCJpYXQiOjE2OTczNjk5MzB9._WUrOgsKx8i96z-WIMhjG79nW8Wj6Ce_-Yn35RQ_5A4";
+    Cesium.Ion.defaultAccessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI0YjdlNGIyMy04OTc4LTRiMDEtOTQ3Yi02OGJhNzM3MmFhYWQiLCJpZCI6MTcxOTM0LCJpYXQiOjE2OTczNjk5MzB9._WUrOgsKx8i96z-WIMhjG79nW8Wj6Ce_-Yn35RQ_5A4";
 
-  const viewer = new Cesium.Viewer("cesiumContainer",  { shouldAnimate: true, });
+    const viewer = new Cesium.Viewer("cesiumContainer", { shouldAnimate: true, });
 
-  try {
-    const resource = await Cesium.IonResource.fromAssetId(2317209);
-    const dataSource = await Cesium.CzmlDataSource.load(resource);
-    await viewer.dataSources.add(dataSource);
-    await viewer.zoomTo(dataSource);
-    viewer.camera.flyTo({
-      destination: Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000000.0),
-    });
-    viewer.container.appendChild(legend);
+    try {
 
-  } catch (error) {
-    console.log(error);
-  }
+      const resource = await Cesium.IonResource.fromAssetId(2317209);
+      const dataSource = await Cesium.CzmlDataSource.load(resource);
+      await viewer.dataSources.add(dataSource);
+      await viewer.zoomTo(dataSource);
+      viewer.camera.flyTo({
+        destination: Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000000.0),
+      });
+      viewer.container.appendChild(legend);
+
+    } catch (error) {
+      console.log(error);
+    }
 
 
     // Add Cesium OSM Buildings, a global 3D buildings layer.
     const buildingTileset = await Cesium.createOsmBuildingsAsync();
     viewer.scene.primitives.add(buildingTileset);
 
+
   </script>
 
- </div>
+  </div>
 
 </body>
 
