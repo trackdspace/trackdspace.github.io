@@ -17,6 +17,8 @@
 
 <body>
 
+  <div id="loading-overlay"></div>
+
   <div id="cesiumContainer"></div>
   <div id="legend" class="cesium-legend">
     <span class="green"> Active payloads : 1618 </span> <br>
@@ -41,16 +43,22 @@
     const viewer = new Cesium.Viewer("cesiumContainer", { shouldAnimate: true, });
 
     try {
+      var spinner = document.getElementById('loading-overlay');
       const resource = await Cesium.IonResource.fromAssetId(2327842);
       const dataSource = await Cesium.CzmlDataSource.load(resource);
 
+      var dataSourcePromise = viewer.dataSources.add(dataSource).then(function () {
 
-      await viewer.dataSources.add(dataSource);
-      await viewer.zoomTo(dataSource);
-      await viewer.camera.flyTo({
-        destination: Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000000.0),
-      });
-      viewer.container.appendChild(legend);
+        viewer.zoomTo(dataSource).then(function () {
+          spinner.style.display = 'none';
+          viewer.camera.flyTo({
+            destination: Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000000.0),
+          });
+          viewer.container.appendChild(legend);
+        });
+
+      })
+
 
     } catch (error) {
       console.log(error);
