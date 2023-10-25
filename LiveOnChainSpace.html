@@ -19,9 +19,9 @@
 
   <div id="cesiumContainer"></div>
   <div id="legend" class="cesium-legend">
-    <p> <span class="green"> Active satellites </span> </p>
-    <p><span class="blue"> Debris </span> </p>
-    <p><span class="red"> Conjunctions </span> </p>
+    <span class="green"> Active payloads : 1618 </span> <br>
+    <span class="blue"> Debris count : 3382 </span><br>
+    <span class="red"> Conjunctions (24 hours) : 180 </span>
   </div>
 
   <script type="module">
@@ -41,11 +41,13 @@
     const viewer = new Cesium.Viewer("cesiumContainer", { shouldAnimate: true, });
 
     try {
-      const resource = await Cesium.IonResource.fromAssetId(2327064);
+      const resource = await Cesium.IonResource.fromAssetId(2327842);
       const dataSource = await Cesium.CzmlDataSource.load(resource);
+
+
       await viewer.dataSources.add(dataSource);
       await viewer.zoomTo(dataSource);
-      viewer.camera.flyTo({
+      await viewer.camera.flyTo({
         destination: Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000000.0),
       });
       viewer.container.appendChild(legend);

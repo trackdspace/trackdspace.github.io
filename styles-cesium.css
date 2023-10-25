@@ -1,16 +1,29 @@
+.body {
+    background-color: black;
+    margin: 0;
+}
+
+#cesiumContainer {
+    background-color: black;
+}
+
 .cesium-legend {
     position: absolute;
     top: 10px;
     left: 10px;
-    background: rgba(245, 242, 242, 0.8);
-    border: 1px solid #d8c6c6;
+    background: rgba(10, 10, 10, 0.2);
+    border: 0px solid #d8c6c6;
     padding: 10px;
-    font-size: 16px;
-    color: rgba(240, 230, 230, 0.8)
+    /* font-size: 16px; */
+    /* color: rgba(240, 230, 230, 0.8); */
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: normal;
+    /* line-height: 28px; */
+
 }
 
-.green
-{
+.green {
     color: rgba(40, 131, 17, 0.8)
 }
 
@@ -20,4 +33,17 @@
 
 .red {
     color: rgba(194, 11, 11, 0.8)
+}
+
+#loading-overlay {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    pointer-events: none;
+    z-index: 9999;
+    background: rgba(255, 255, 255, 1) url("loading.gif") no-repeat;
+    background-position: center;
+    opacity: 1;
 }
