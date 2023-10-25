@@ -41,8 +41,7 @@
     const viewer = new Cesium.Viewer("cesiumContainer", { shouldAnimate: true, });
 
     try {
-
-      const resource = await Cesium.IonResource.fromAssetId(2317209);
+      const resource = await Cesium.IonResource.fromAssetId(2327064);
       const dataSource = await Cesium.CzmlDataSource.load(resource);
       await viewer.dataSources.add(dataSource);
       await viewer.zoomTo(dataSource);
