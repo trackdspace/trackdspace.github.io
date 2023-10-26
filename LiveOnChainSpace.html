@@ -24,7 +24,7 @@
     <span class=""> Data source : space-track.org </span> <br>
     <span class="green"> Active payloads : 16248 </span> <br>
     <span class="blue"> Debris count : 41790 </span><br>
-    <span class="red"> Conjunctions (24 hours) : 1857 </span>
+    <span class="red"> Conjunctions (Last 24 hours) : 1857 </span>
 
   </div>
 
@@ -46,7 +46,7 @@
 
     try {
       var spinner = document.getElementById('loading-overlay');
-      const resource = await Cesium.IonResource.fromAssetId(2327842);
+      const resource = await Cesium.IonResource.fromAssetId(2329381);
       const dataSource = await Cesium.CzmlDataSource.load(resource);
 
       var dataSourcePromise = viewer.dataSources.add(dataSource).then(function () {
