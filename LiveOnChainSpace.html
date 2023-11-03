@@ -46,7 +46,7 @@
 
     try {
       var spinner = document.getElementById('loading-overlay');
-      const resource = await Cesium.IonResource.fromAssetId(2335104);
+      const resource = await Cesium.IonResource.fromAssetId(2340262);
       const dataSource = await Cesium.CzmlDataSource.load(resource);
 
       var dataSourcePromise = viewer.dataSources.add(dataSource).then(function () {
