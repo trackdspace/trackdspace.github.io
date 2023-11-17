@@ -12,7 +12,7 @@
 
   <link href="https://cesium.com/downloads/cesiumjs/releases/1.110/Build/Cesium/Widgets/widgets.css" rel="stylesheet">
   <link href="styles-cesium.css" rel="stylesheet">
-  
+
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-5FKX34RGYJ"></script>
   <script> window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-5FKX34RGYJ'); </script>
@@ -30,7 +30,7 @@
     <span class=""> Data source : space-track.org </span> <br>
     <span class="green"> Active payloads : 16248 </span> <br>
     <span class="blue"> Debris count : 41790 </span><br>
-    <span class="red"> Conjunctions (Last 24 hours) : 1340 </span>
+    <span class="red"> Conjunctions (Last 24 hours) : 781 </span>
 
   </div>
 
@@ -52,7 +52,7 @@
 
     try {
       var spinner = document.getElementById('loading-overlay');
-      const resource = await Cesium.IonResource.fromAssetId(2343755);
+      const resource = await Cesium.IonResource.fromAssetId(2356194);
       const dataSource = await Cesium.CzmlDataSource.load(resource);
 
       var dataSourcePromise = viewer.dataSources.add(dataSource).then(function () {
